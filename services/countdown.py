@@ -99,9 +99,9 @@ def create_embed():
         inline=True,
     )
 
-    # embed.set_footer(
-    #     text="Hanes VPS License Monitor"
-    # )
+    embed.set_footer(
+        text="Cloud-40-NVMe-ID - hsci-web"
+    )
 
     return embed
 
