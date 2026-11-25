@@ -8,11 +8,18 @@ load_dotenv()
 
 #discord
 HANES_LICENSING_WEBHOOK_URL = os.getenv("HANES_LICENSING_WEBHOOK_URL")
+HANES_SSL_WEBHOOK_URL = os.getenv("HANES_SSL_WEBHOOK_URL")
 
 # License
 HANES_NAME = "Hanes VPS"
 HANES_EXPIRY_DATE = date.fromisoformat(
     os.getenv("HANES_EXPIRY_DATE", "2027-02-14")
+    )
+
+# SSL certificate
+HANES_SSL_NAME = "Hanes SSL"
+HANES_SSL_EXPIRY_DATE = date.fromisoformat(
+    os.getenv("HANES_SSL_EXPIRY_DATE", "2027-02-14")
     )
 
 # Timezone
@@ -26,6 +33,7 @@ UPDATE_MINUTE = int(os.getenv("UPDATE_MINUTE", 30))
 
 #Storage
 MESSAGE_FILE = "data/message.json"
+SSL_MESSAGE_FILE = "data/message_ssl.json"
 LOG_FILE = "logs/countdown.log"
 
 if not HANES_LICENSING_WEBHOOK_URL:
